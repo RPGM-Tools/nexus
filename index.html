@@ -1,0 +1,75 @@
+<html class="scroll-hidden">
+
+<head>
+    <title>RPGM Tools</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="outer-container">
+        <div class="inner-container">
+            <div id="nav-bar">
+                <div id="menu">
+                    <a href="index.html" title="Home" draggable="false">
+                        <img src="img/d20-128x128.png" draggable="false">
+                    </a>
+                </div>
+                <div id="title">
+                    <p id="rp-word" class="title-text unselectable"></p>
+                    <p id="cursor" class="title-text unselectable">█</p>
+                    <p class="title-text unselectable">Game Management Tools</p>
+                </div>
+            </div>
+
+            <div id="content" class="scroll-hidden">
+                <form id="name-form">
+                    <input type="text" id="type-input" placeholder="Creature Type">
+                    <div id="form-row-1">
+                        <div class="vertical">
+                            <label for="quantity-input">Quantity</label>
+                            <input type="range" id="quantity-input" name="quantity" min="1" max="9" value="5">
+                        </div>
+                        <div class="vertical">
+                            <label for="method-input">Generation Method</label>
+                            <select id="method-input" name="method">
+                                <option value="placeholder">Placeholder</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="form-row-2">
+                        <div class="vertical">
+                            <label for="genre-input">Genre</label>
+                            <input type="text" id="genre-input" name="genre">
+                        </div>
+                        <div class="vertical">
+                            <label for="gender-input">Gender</label>
+                            <input type="text" id="gender-input" name="gender" placeholder="Let AI decide">
+                        </div>
+                        <div class="vertical">
+                            <label for="format-input">Format</label>
+                            <select id="format-input" name="format">
+                                <option value="placeholder">Placeholder</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button id="submit-button" type="submit">
+                        <p>Generate!</p>
+                        <img src="img/d20-512x512.png" draggable="false">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <p id="copyright">&copy; 2024 RPGM Tools</p>
+    </div>
+
+    <script type="module" src="scripts/main.js"></script>
+</body>
+
+</html>

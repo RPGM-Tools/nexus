@@ -1,0 +1,261 @@
+/* TODO: Add chromium specific styles */
+
+:root {
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    height: 100%;
+}
+
+label {
+    color: white;
+}
+
+.outer-container {
+    height: calc(100% - 2.5rem);
+    padding: 1rem;
+    justify-content: center;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 5px solid #222;
+    border-radius: 1rem;
+}
+
+.title-text {
+    font-size: 2.5vw;
+    font-weight: bold;
+    font-family: monospace;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    color: white;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.vertical label {
+    align-self: center;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+#form-row-1 {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+}
+
+#form-row-2 {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+}
+
+input[type="text"] {
+    align-self: center;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: 0;
+    width: 90%;
+    border-bottom: #222 2px solid;
+    text-align: center;
+}
+
+input[type="text"]:focus {
+    border-bottom: #0f0 2px solid;
+    transition: border-bottom-color 400ms;
+}
+
+#type-input {
+    font-size: 2rem;
+    width: 64%;
+}
+
+select {
+    outline: none;
+    box-shadow: transparent 0 0 0 2px;
+}
+
+select:focus {
+    box-shadow: #0f0 0 0 0 2px;
+    transition: box-shadow 400ms;
+}
+
+#quantity-input {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+#quantity-input::-webkit-slider-runnable-track {
+    background: #222;
+    border-radius: 90px;
+    height: 0.5rem;
+}
+
+#quantity-input::-moz-range-track {
+    background: #222;
+    border-radius: 90px;
+    height: 0.5rem;
+}
+
+#quantity-input::-moz-range-progress {
+    background: #333;
+    border-radius: 90px;
+    height: 0.5rem;
+}
+
+#quantity-input:focus::-moz-range-progress {
+    background: #0f0;
+    transition: background 400ms;
+}
+
+#submit-button {
+    padding-top: 1rem;
+    display: flex;
+    width: calc(100% - 4rem);
+    height: auto;
+    aspect-ratio: 1;
+    flex-direction: column;
+    background-color: #222;
+    border: 0;
+    border-radius: 1rem;
+    outline: none;
+    box-shadow: transparent 0 0 0 2px;
+}
+
+#submit-button:hover {
+    cursor: pointer;
+    background-color: #333;
+    border: 0;
+    border-radius: 1rem;
+    transition: background-color 400ms;
+}
+
+#submit-button:focus:not(:active) {
+    box-shadow: #0f0 0 0 0 2px;
+    transition: box-shadow 400ms;
+}
+
+#submit-button img {
+    flex: 1;
+    height: 0;
+    object-fit: contain;
+}
+
+#submit-button p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+
+#name-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 5px solid #333;
+    border-radius: 1rem;
+}
+
+#content {
+    flex: 1;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#copyright {
+    color: white;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+#rp-word {
+    color: var(--title-color);
+    text-shadow: 0 0 1vw var(--title-color);
+}
+
+#cursor {
+    width: 1.25vw;
+    height: 3vw;
+    margin-left: 0.4vw;
+    margin-right: 0.4vw;
+}
+
+#nav-bar {
+    display: flex;
+    background-color: #222;
+    padding-bottom: 5px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+}
+
+#menu img {
+    cursor: pointer;
+    width: 4vw;
+    height: 4vw;
+    color: #0f0;
+}
+
+#title {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scroll-hidden::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scroll-hidden {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
